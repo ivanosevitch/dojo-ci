@@ -1,0 +1,12 @@
+name: reply_to_comments
+
+on: issue_comment
+
+jobs:
+  reply_to_comments:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Log comment message
+        run: |
+          echo ${{ github.event.comment.body }}
